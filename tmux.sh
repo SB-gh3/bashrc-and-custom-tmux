@@ -1,5 +1,5 @@
 #!/bin/sh
-sessname="newsess"
+sessname="tmux"
 
 # Create a new session named "$sessname", and run command
 tmux new-session -d -s "$sessname"
@@ -13,4 +13,4 @@ tmux send-keys -t "$sessnname:btop" "btop" Enter
 tmux new-window -t "$sessname" -n "bash"
 
 # Attach session
-tmux attach -t newsess
+tmux attach -t tmux

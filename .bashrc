@@ -5,3 +5,11 @@ LFCD="/home/spencerb/.config/lf/lfcd.sh"                                #  pre-b
 if [ -f "$LFCD" ]; then
     source "$LFCD"
 fi
+
+#start of custom commands
+#!bin/sh
+
+# open custom tmux pane
+function tmux() {
+ 	 ~/tmux.sh
+}
