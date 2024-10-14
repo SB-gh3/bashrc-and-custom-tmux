@@ -21,5 +21,5 @@ function rustGraph
 {
     cd /home/spencerb/Documents/Rust-Development/graph-plotting
     cargo r 
-    cd ~
+    cd -
 }
