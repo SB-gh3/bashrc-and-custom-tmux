@@ -7,9 +7,19 @@ if [ -f "$LFCD" ]; then
 fi
 
 #start of custom commands
+
 #!bin/sh
 
 # open custom tmux pane
-function tmux() {
+function tmux() 
+{
  	 ~/tmux.sh
+}
+
+# Run rustGraph - Graphing calculator I made in Rust https://github.com/SB-gh3/Rust-Graphing-Calculator
+function rustGraph
+{
+    cd /home/spencerb/Documents/Rust-Development/graph-plotting
+    cargo r 
+    cd ~
 }
