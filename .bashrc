@@ -27,14 +27,14 @@ function rustGraph
 #nix-clean custom command - Tyler Hardin
 function nix-clean () 
 {
-    nix-env --delete-generations old
-    nix-store --gc
-    nix-channel --update
-    nix-env -u --always
+    sudo nix-env --delete-generations old
+    sudo nix-store --gc
+    sudo nix-channel --update
+    sudo nix-env -u --always
     for link in /nix/var/nix/gcroots/auto/*
     do
     rm $(readlink "$link")
     done
-    nix-collect-garbage -d
+    sudo nix-collect-garbage -d
 }
 export -f nix-clean;
