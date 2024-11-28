@@ -33,7 +33,7 @@ function nix-clean ()
     sudo nix-env -u --always
     for link in /nix/var/nix/gcroots/auto/*
     do
-    rm $(readlink "$link")
+    sudo rm $(readlink "$link")
     done
     sudo nix-collect-garbage -d
 }
