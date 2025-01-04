@@ -25,16 +25,16 @@ function rustGraph
 }
 
 #nix-clean custom command - Tyler Hardin
-function nix-clean () 
-{
-    #sudo nix-env --delete-generations old
-    sudo nix-store --gc
-    sudo nix-channel --update
-    sudo nix-env -u --always
-    for link in /nix/var/nix/gcroots/auto/*
-    do
-    rm $(readlink "$link") #DO NOT MAKE SUDO
-    done
-    sudo nix-collect-garbage -d
-}
-export -f nix-clean;
+# function nix-clean () 
+# {
+#     #sudo nix-env --delete-generations old
+#     sudo nix-store --gc
+#     sudo nix-channel --update
+#     sudo nix-env -u --always
+#     for link in /nix/var/nix/gcroots/auto/*
+#     do
+#     rm $(readlink "$link") #DO NOT MAKE SUDO
+#     done
+#     sudo nix-collect-garbage -d
+# }
+# export -f nix-clean;
